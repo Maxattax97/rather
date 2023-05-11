@@ -1,4 +1,4 @@
-package rather
+package main
 
 import (
 	"context"
@@ -7,7 +7,8 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/Maxattax97/rather/protobufs/rather"
+	pb "github.com/Maxattax97/rather/pb"
+
 	"google.golang.org/grpc"
 )
 
