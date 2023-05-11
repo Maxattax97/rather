@@ -1,14 +1,14 @@
 syntax = "proto3";
 
-option go_package = "github.com/Maxattax97/monorepo/protobufs/ringaroundtherosie";
+option go_package = "github.com/Maxattax97/monorepo/protobufs/rather";
 option java_multiple_files = true;
-option java_package = "com.maxocull.ringaroundtherosie";
-option java_outer_classname = "RingAroundTheRosieProto";
+option java_package = "com.maxocull.rather";
+option java_outer_classname = "RatherProto";
 
-package ringaroundtherosie;
+package rather;
 
 // The greeting service definition.
-service RingAroundTheRosie {
+service Rather {
   // Sends a greeting
   rpc GetRose (RoseRequest) returns (RoseResponse) {}
 }

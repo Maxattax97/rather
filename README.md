@@ -13,13 +13,13 @@ services communicate via a gRPC message bus.
 Languages implemented:
 
 - Typescript/Javascript
+- C/C++
+- Golang
+- Rust
 - Python
 - Java
 - C#
 - PHP
-- C/C++
-- Golang
-- Rust
 
 The microservices arrange themselves in a circle and pass a message to their
 right. When a message is received, it is forwarded to the right again.

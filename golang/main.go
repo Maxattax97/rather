@@ -1,4 +1,4 @@
-package ringaroundtherosie
+package rather
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/Maxattax97/ring-around-the-rosie/protobufs/ringaroundtherosie"
+	pb "github.com/Maxattax97/rather/protobufs/rather"
 	"google.golang.org/grpc"
 )
 
@@ -15,9 +15,9 @@ var (
 	port = flag.Int("port", 50011, "The server port")
 )
 
-// server is used to implement ringaroundtherosie.GreeterServer.
+// server is used to implement rather.GreeterServer.
 type server struct {
-	pb.UnimplementedRingAroundTheRosieServer
+	pb.UnimplementedRatherServer
 }
 
 // SayHello implements helloworld.GreeterServer
@@ -33,7 +33,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	s := grpc.NewServer()
-	pb.RegisterRingAroundTheRosieServer(s, &server{})
+	pb.RegisterRatherServer(s, &server{})
 	log.Printf("server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
