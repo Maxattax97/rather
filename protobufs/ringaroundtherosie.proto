@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "github.com/Maxattax97/monorepo/protobufs/ringaroundtherosie";
+option java_multiple_files = true;
+option java_package = "com.maxocull.ringaroundtherosie";
+option java_outer_classname = "RingAroundTheRosieProto";
+
+package ringaroundtherosie;
+
+// The greeting service definition.
+service RingAroundTheRosie {
+  // Sends a greeting
+  rpc GetRose (RoseRequest) returns (RoseResponse) {}
+}
+
+// The request message containing the user's name.
+message RoseRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message RoseResponse {
+  string message = 1;
+}
