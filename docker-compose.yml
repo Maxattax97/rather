@@ -3,3 +3,6 @@ services:
   rather-go:
     image: rather-go
     hostname: rather-go
+  rather-ts:
+    image: rather-ts
+    hostname: rather-ts

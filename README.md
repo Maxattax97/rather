@@ -26,5 +26,11 @@ right. When a message is received, it is forwarded to the right again.
 
 ## building
 
+You will need these build tools:
+
+```
+sudo pacman -Syu grpc protobuf bazel
+```
+
 Meson and Bazel are up-and-coming next generation build systems. We implement
 both for demonstration purposes.
